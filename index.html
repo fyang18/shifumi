@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Emblema+One&display=swap" rel="stylesheet">
+    <title>SHIFUMI</title>
+</head>
+<body> 
+    <header>
+        <h1>SHIFUMI</h1>
+    </header>
+        <!-- Bande son caché qui le lance à louverture de page et tourne en boucle -->
+        <audio controls="controls" hidden="true" loop="true" autoplay="autoplay">
+                <source src="son\music2.mp3" >
+            </audio>
+
+        <!-- SECTION CHOIX -->
+        <section class="lesBoutons">
+            <ul class="listeBouton">
+                <li class="bouton" id="boutonPierre">
+                    <input type="image" id="pierre" src="images/caillou.png"/>
+                </li>
+                <li class="bouton" id="boutonFeuille">
+                    <input type="image" id="feuille" src="images/papier.png"/>
+                </li>
+                <li class="bouton" id="boutonCiseau">
+                    <input type="image" id="ciseaux" src="images/ciseaux.png"/>
+                </li>
+            </ul>
+          <h2 class="faitChoix"> Faites Votre Choix ! </h2>
+        </section>
+        <!-- SECTION AFFICHAGE DES CHOIX -->
+        <section class="afficheImage">
+            <div class="titre">
+              <h2 class="titreJoueur"> JOUEUR </h2>
+                <h2 class="titreIa"> IA </h2>
+            </div>
+                  <div class="iconeChoix">
+        <!-- Affichage coté joueur-->
+                    <div id="joueur"> 
+                  </div>
+              <div class="afficheVersus">
+                <img class="imageVersus" src="images/Vs.png"/>
+              </div>
+        <!-- Affiché coté IA-->
+            <div id="afficheIa"> 
+            </div>
+        </section>
+        <!-- SECTION SCORE & RESET-->
+        <section class="scoreEtReset">
+            <div class="bas">
+                <div id="score">
+                    <div id="scoreJoueur">
+                        <p>Score Joueur</p>
+                        <div id="AffichageScoreJoueur">
+                        </div>
+                    </div>
+                    <div id="scoreIa">
+                        <p>Score Ia</p>
+                        <div id="AffichageScoreIa">
+                        </div>
+                    </div>
+                </div>
+                <div id="afficheResultat">
+                </div>
+                <div class="reset">
+                    <input id=boutonReJouer type="button" value="Nouvelle Partie">
+                </div>
+            </div>
+        </section>
+    <script src="DOM.js"></script>
+</body>
+</html>
